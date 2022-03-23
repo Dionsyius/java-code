@@ -1,0 +1,107 @@
+for (int i = 0; i < 5; i++) {
+  System.out.println(i);
+}
+
+/////////////////////////////////////////
+public static void main(String[] args) {  
+//loop of i  
+for(int i=1;i<=3;i++){  
+//loop of j  
+for(int j=1;j<=3;j++){  
+        System.out.println(i+" "+j);  
+}//end of i  
+}//end of j  
+}  
+/////////////////////////////////////////
+
+public static void main(String[] args) {  
+for(int i=1;i<=5;i++){  
+for(int j=1;j<=i;j++){  
+        System.out.print("* ");  
+}  
+System.out.println();//new line  
+}  
+}  
+///////////////////////////////////////////
+
+public static void main(String[] args){
+
+Scanner scan =new Scanner(System.in);
+
+for(int i=0; i<3; i++){
+
+System.out.println("Enter student id:");
+int id = scan.nextInt();
+System.out.println("Enter student name:");
+String name = scan.next();
+System.out.println("Enter student grade 1:");
+int grade1 = scan.nextInt();
+System.out.println("Enter student grade 2:");
+int grade2 = scan.nextInt();
+
+int average= (grade1+grade2)/2;
+
+System.out.println("The student id is: " +id);
+System.out.println("The student name is: " +name);
+System.out.println("The student grade 1 is: " +grade1);
+System.out.println("The student grade 2 is: " +grade2);
+System.out.println("The student average is: " +average);
+
+if(average >= 90){
+System.out.println("The student grade is: A");
+}
+else if(average >=80{
+System.out.println("The student grade is: B");
+}
+else if(average>=70){
+System.out.println("The student grade is: C");
+}
+else if(average>=60){
+System.out.println("The student grade is: D");
+}
+else {
+System.out.println("The student grade is: F");
+
+}
+
+
+
+}
+
+///////////////////////////////////////////////
+import java.util.Scanner;
+
+public class Multiples
+{
+    //-----------------------------------------------------------------
+    //  Prints multiples of a user-specified number up to a user-
+    //  specified limit.
+    //-----------------------------------------------------------------
+    public static void main(String[] args)
+    {
+        final int PER_LINE = 5;
+        int value, limit, mult, count = 0;
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Enter a positive value: ");
+        value = scan.nextInt();
+
+        System.out.print("Enter an upper limit: ");
+        limit = scan.nextInt();
+
+        System.out.println();
+        System.out.println("The multiples of " + value + " between " +
+                value + " and " + limit + " (inclusive) are:");
+
+        for (mult = value; mult <= limit; mult += value)
+        {
+            System.out.print(mult + "\t");
+
+            // Print a specific number of values per line of output
+            count++;
+            if (count % PER_LINE == 0)
+                System.out.println();
+        }
+    }
+}
