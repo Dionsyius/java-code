@@ -1,0 +1,137 @@
+ /*
+      int option = 0;
+      while(option!=5){
+      System.out.println("\nMain menu:" +
+                         "\n1.Addition" +
+                         "\n2.Subtraction" +
+                         "\n3.Multiplying"+
+                        "\n4.Division" +
+                         "\n5.Exit");
+
+      System.out.println("Please enter your choice: ");
+      int number1=0;
+      int number2=0;
+      int result=0;
+      option= scan.nextInt();
+
+      switch(option) {
+
+        case 1:
+          System.out.println("Enter first number: ");
+          number1 = scan.nextInt();
+          System.out.println("Enter second number: ");
+          number2 = scan.nextInt();
+          result = number1 + number2;
+          System.out.println("The addition of two numbers is: " + result);
+          break;
+
+        case 2:
+          System.out.println("Enter first number: ");
+          number1 = scan.nextInt();
+          System.out.println("Enter second number: ");
+          number2 = scan.nextInt();
+          result = number1 - number2;
+          System.out.println("The subtraction of two numbers is: " + result);
+          break;
+        case 3:
+          System.out.println("Enter first number: ");
+          number1 = scan.nextInt();
+          System.out.println("Enter second number: ");
+          number2 = scan.nextInt();
+          result = number1 * number2;
+          System.out.println("The multiplication of two numbers is: " + result);
+          break;
+        case 4:
+          System.out.println("Enter first number: ");
+          number1 = scan.nextInt();
+          System.out.println("Enter second number: ");
+          number2 = scan.nextInt();
+          result = number1 / number2;
+          System.out.println("The division of two numbers is: " + result);
+          break;
+
+
+        default:
+          System.out.println("Invalid choice... Try again");
+      }
+
+      }
+    */
+      int option=0;
+      int deposit=0;
+      int withdraw=0;
+
+      do{
+        System.out.println("\nWelcome to the Bank:" +
+                "\n1.Enter initial deposit" +
+                "\n2.Enter extra deposit" +
+                "\n3.Withdraw" +
+                "\n4.Total"+
+                "\n5.Exit");
+
+
+        System.out.println("Please enter your choice: ");
+
+        option= scan.nextInt();
+
+        switch(option) {
+
+          case 1:
+            if(deposit<=0){
+              System.out.println("Enter money to start: ");
+            }
+
+            System.out.println("Enter initial value in deposit: ");
+            deposit = scan.nextInt();
+
+            System.out.println("Your deposit is: " + deposit);
+            break;
+
+          case 2:
+              int totaldeposit=0;
+              System.out.println("Enter more deposit: ");
+              totaldeposit = scan.nextInt();
+
+              deposit +=totaldeposit;
+
+             System.out.println("Your total deposit is: " + totaldeposit);
+
+            System.out.println("Your deposit is: " +  deposit);
+            break;
+
+
+          case 3:
+            if(deposit ==0){
+              System.out.println("Please deposit first: ");
+              break;
+            }
+            System.out.println("Enter withdraw amount: ");
+            withdraw=scan.nextInt();
+             while(withdraw>deposit) {
+
+               if (withdraw > deposit) {
+                 System.out.println("Error, please withdraw less than deposit");
+                 System.out.println("Enter withdraw amount: ");
+                 withdraw=scan.nextInt();
+
+               }
+             }
+            System.out.println("You withdraw amount of: " + withdraw);
+
+            System.out.println("You total amount is now: " + (deposit-withdraw));
+            break;
+          case 4:
+
+            System.out.println("Your balance is: " + (deposit-withdraw));
+            break;
+          case 5:
+            System.out.println("Exit");
+            break;
+
+
+          default:
+            System.out.println("Invalid choice... Try again");
+        }
+
+      }
+      while(option<5);
