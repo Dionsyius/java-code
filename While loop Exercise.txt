@@ -1,0 +1,36 @@
+public class a{
+	static Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) {
+		
+		int sum=0;
+		int value;
+		int count =0;
+		
+		System.out.println("Enter the number or integer (0 to quit): ");
+		value = scan.nextInt();
+		
+		while (value != 0) {
+			count++;
+			
+			// sum = sum + value
+			sum +=value;
+			System.out.println("The sum of numbers are: " + sum);
+			
+			System.out.println("Enter the number or integer (0 to quit): ");
+			value = scan.nextInt();
+			
+			
+		}
+		
+		if (count == 0) {
+			System.out.println("No numbers were entered" + sum);
+		}
+		else {
+			int average = sum/count;
+			System.out.println("The average is: " + average);
+		}
+		
+		
+		
+	}
+}
