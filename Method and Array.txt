@@ -1,0 +1,54 @@
+import java.util.*;
+public class csc137{
+    static Scanner scan = new Scanner(System.in);
+    public static void main(String[] args) {
+
+        System.out.println("Enter the size of Array: ");
+        int size = scan.nextInt();
+        int [] students = new int[size];
+
+        int[]id=new int[size];
+        String [] name =new String[size];
+        int [] grade1 = new int[size];
+        int [] grade2 = new int[size];
+
+
+
+
+      fillArray(students, id, name, grade1, grade2);
+      displayArray(students,id, name, grade1, grade2 );
+      sumArray(students, grade1, grade2);
+      averageArray(students, grade1, grade2);
+
+    }
+
+
+   ////////////////////////////////////////////////////////////////////////////////////
+   public  static void fillArray(int[] students, int[]id, String [] name, int [] grade1, int [] grade2){
+
+        for(int i=0; i< students.length;i++){
+            System.out.println("Enter id: ");
+            id[i]= scan.nextInt();
+            System.out.println("Enter name: ");
+            name[i]= scan.next();
+            System.out.println("Enter grade 1: ");
+            grade1[i]= scan.nextInt();
+            System.out.println("Enter grade 2: ");
+            grade2[i]= scan.nextInt();
+        }
+
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////
+    public static void displayArray(int [] students456,int[]id, String [] name, int [] grade1, int [] grade2 ) {
+
+         int average=0;
+        System.out.println("ID NAME GRADE 1 GRADE 2");
+        for (int i = 0; i < students456.length; i++) {
+            int total = grade1[i] + grade2[i];
+            average = total / 2;
+            System.out.println(id[i] + "  " + name[i] + "  " + grade1[i] + "  " + grade2[i] + " " + total + " " + average);
+        }
+
+
+    }
