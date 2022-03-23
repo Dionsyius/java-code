@@ -1,0 +1,113 @@
+class Car{
+
+    int gear = 4;
+
+    void gears(){
+        System.out.println("My car has "+ gear + " gears");
+    }
+
+}
+
+
+public class Virtual137{
+
+    public static void main(String[] args) {
+        Car csc137 = new Car();// create an object of the class
+
+        csc137.gears();
+
+    }
+}
+
+/////////////////////////////////////////
+
+//// public class Dog
+public class Dog{
+
+    String breed;
+    String size;
+    int age;
+    String color;
+    int eyes;
+    String eyesColor;
+
+    public String display(){
+        return ("The breed is: "+ breed + "\nSize is: " + size+
+                "\nThe age is: " + age + "\nThe color of dog is: " + color+
+                "\nThe dog has: " + eyes + " eyes" + "\nThe eye color are: " + eyesColor);
+    }
+
+    public static void main(String[] args) {
+
+        Dog shepard = new Dog(); // object name
+
+        shepard.breed="German Dog";
+        shepard.size = "Big";
+        shepard.age = 3;
+        shepard.color = "Black and White";
+        shepard.eyes =2;
+        shepard.eyesColor = "Red";
+        System.out.println(shepard.display());
+
+    }
+}
+
+/////////////////////////////////////////////////////
+
+//// public class Dog
+class Dogg {
+
+    String breed;
+    String size;
+    int age;
+    String color;
+    int eyes;
+    String eyesColor;
+
+    public String display() {
+        return ("The breed is: " + breed + "\nSize is: " + size +
+                "\nThe age is: " + age + "\nThe color of dog is: " + color +
+                "\nThe dog has: " + eyes + " eyes" + "\nThe eye color are: " + eyesColor);
+    }
+}
+////////////////////////////////////////////////////////////////////
+public class Dog{
+    static Scanner scan = new Scanner(System.in);
+    public static void main(String[] args) {
+
+        Dogg shepard = new Dogg(); // object name
+        Dogg arcticDog = new Dogg(); // object name
+
+        System.out.println("Enter breed name: ");
+        shepard.breed=scan.next();
+        System.out.println("Enter the size of the dog: ");
+        shepard.size = scan.next();
+        System.out.println("Enter the age of the dog: ");
+        shepard.age = scan.nextInt();
+        scan.nextLine();
+        System.out.println("Enter the color of the dog: ");
+        shepard.color = scan.nextLine();
+        System.out.println("Enter the number of eyes of the dog: ");
+        shepard.eyes = scan.nextInt();
+        System.out.println("Enter the color of the dogs eyes: ");
+        shepard.eyesColor = scan.next();
+        System.out.println(shepard.display());
+
+        ////////////// new object name called arcticDog////////////////////////////////////
+        System.out.println("Enter breed name: ");
+        arcticDog.breed=scan.next();
+        System.out.println("Enter the size of the dog: ");
+        arcticDog.size = scan.next();
+        System.out.println("Enter the age of the dog: ");
+        arcticDog.age = scan.nextInt();
+        scan.nextLine();
+        System.out.println("Enter the color of the dog: ");
+        arcticDog.color = scan.nextLine();
+        System.out.println("Enter the number of eyes of the dog: ");
+        arcticDog.eyes = scan.nextInt();
+        System.out.println("Enter the color of the dogs eyes: ");
+        arcticDog.eyesColor = scan.next();
+        System.out.println(arcticDog.display());
+
+    }
+}
